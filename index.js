@@ -1,4 +1,4 @@
-const cats = ["Milo", "Otis", "Garfield"]
+let cats = ["Milo", "Otis", "Garfield"]
 function logCats(cats) {
     console.log("Cats", cats)
 }
@@ -6,23 +6,23 @@ function destructivelyAppendCat() {
        cats.push("Ralph")
 }
 function destructivelyPrependCat(){
-    cats.splice(0,"Bob")
+    cats.unshift("Bob",)
 }
 function destructivelyRemoveLastCat(){
-    cats.pop(0)
+    cats.pop()
 }
 function destructivelyRemoveFirstCat(){
     cats.shift(0)
 }
 function appendCat(){
-    cats.splice(0,"Broom")
+    return [...cats,"Broom"]
 }
 function prependCat(){
-    cats.splice(0,"Arnold")
+    return ["Arnold",...cats]
 }
 function removeLastCat() {
-    cats.pop(0)
+    return cats.slice(0,2)
 }
 function  removeFirstCat(){
-    cats.shift(0)
+    return cats.slice(1,3)
 }
